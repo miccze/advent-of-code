@@ -15,5 +15,9 @@ new File("puzzle-input.txt").eachLine { line ->
 }
 println(sumPerLine)
 println(sumPerLine.size())
-def finalSum = sumPerLine.sum()
+def finalSum = 0
+sumPerLine.each{
+  finalSum += it
+}
+// def finalSum = sumPerLine.sum()
 println(finalSum)
