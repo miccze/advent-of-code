@@ -83,8 +83,3 @@ assert main("7pqrstsixteen") == 76
 
 List testValues = [29, 83, 13, 24, 42, 14, 76]
 assert testValues.sum() == 281
-
-
-
-
-
