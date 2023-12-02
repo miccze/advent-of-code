@@ -3,7 +3,7 @@
 List sumPerLine = []
 
 new File("../puzzle-input.txt").eachLine { line ->
-  def sum = main(line)
+  def sum = getFirstAndLastNumber(line)
   sumPerLine.add(sum)
 }
 println(sumPerLine)
@@ -12,7 +12,7 @@ def finalSum = sumPerLine.sum()
 println(finalSum)
 
 
-def main(String line) {
+def getFirstAndLastNumber(String line) {
   Map wordsAndValues = [
     'one':'1',
     'two':'2',
@@ -65,22 +65,22 @@ def checkIfWordIsInsideLine(String line, String word, String value=null) {
 }
 
 
-assert main("two5two3334two") == 22
-assert main("1two5three4") == 14
-assert main("onetwo3") == 13
-assert main("1twothree") == 13
-assert main("5") == 55
-assert main("5l") == 55
-assert main("one") == 11
-assert main("two555two5") == 25
+assert getFirstAndLastNumber("two5two3334two") == 22
+assert getFirstAndLastNumber("1two5three4") == 14
+assert getFirstAndLastNumber("onetwo3") == 13
+assert getFirstAndLastNumber("1twothree") == 13
+assert getFirstAndLastNumber("5") == 55
+assert getFirstAndLastNumber("5l") == 55
+assert getFirstAndLastNumber("one") == 11
+assert getFirstAndLastNumber("two555two5") == 25
 
-assert main("two1nine") == 29
-assert main("eightwothree") == 83
-assert main("abcone2threexyz") == 13
-assert main("xtwone3four") == 24
-assert main("4nineeightseven2") == 42
-assert main("zoneight234") == 14
-assert main("7pqrstsixteen") == 76
+assert getFirstAndLastNumber("two1nine") == 29
+assert getFirstAndLastNumber("eightwothree") == 83
+assert getFirstAndLastNumber("abcone2threexyz") == 13
+assert getFirstAndLastNumber("xtwone3four") == 24
+assert getFirstAndLastNumber("4nineeightseven2") == 42
+assert getFirstAndLastNumber("zoneight234") == 14
+assert getFirstAndLastNumber("7pqrstsixteen") == 76
 
 List testValues = [29, 83, 13, 24, 42, 14, 76]
 assert testValues.sum() == 281
