@@ -72,6 +72,7 @@ assert main("onetwo3") == 13
 assert main("1twothree") == 13
 assert main("5") == 55
 assert main("5l") == 55
+assert main("one") == 11
 
 assert main("two1nine") == 29
 assert main("eightwothree") == 83
